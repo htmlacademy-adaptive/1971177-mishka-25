@@ -16,7 +16,6 @@
 <header class="header">
   <div class="header__wrapper">
     <nav class="navigation">
-      <!--    LOGO-->
       <div class="navigation__logo-wrapper">
         <a class="link" href="index.html" aria-label="Мишка">
           <svg class="header__logo-mobile" width="86" height="35">
@@ -27,12 +26,45 @@
           <svg class="header__logo-tablet" width="114" height="46">
             <use xlink:href="img/sprite.svg#tablet-logo"></use>
           </svg>
-          <img src="img/mobile/menu.svg" class="navigation__menu-button" alt="Закрыть меню">
+          <img src="img/mobile/menu-close.svg" class="navigation__menu-button hidden" alt="Закрыть меню">
           <svg class="header__logo-desktop" width="149" height="72">
             <use xlink:href="img/sprite.svg#desktop-logo"></use>
           </svg>
         </a>
       </div>
+
+      <!--      add display-none class to navigation__first-menu to hide menu in mobile with js-->
+      <ul class="navigation__first-menu">
+        <li class="navigation__menu-item"><a href="catalog.html" class="menu__link">Каталог товаров</a> </li>
+        <li
+          class="navigation__menu-item navigation__menu-item--padding navigation__menu-item--border navigation__menu-item--tablet-border">
+          <a href="form.html" class="menu__link">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="navigation__bottom-menu">
+        <li class="bottom-menu__item">Новые поступления</li>
+        <li class="bottom-menu__item bottom-menu__item--padding">Распродажа</li>
+      </ul>
+
+      <!--      add display-none class to navigation__second-menu to hide menu in mobile with js-->
+      <ul class="navigation__second-menu">
+        <li
+          class="second-menu__menu-item second-menu__menu-item--border navigation__menu-item--border second-menu__search-icon--width">
+          <svg width="18" height="18" class="second-menu__search-icon">
+            <use xlink:href="img/sprite.svg#search-icon"></use>
+          </svg>
+          <span class="second-menu__search-icon--text">Поиск по сайту</span>
+        </li>
+        <li class="second-menu__menu-item second-menu navigation__menu-item--border second-menu__menu-item--width">
+          <svg width="21" height="18" class="second-menu__cart-icon">
+            <use xlink:href="img/sprite.svg#cart-icon"></use>
+          </svg>
+          Корзина: пока пуста
+        </li>
+      </ul>
+
+      <div class="navigation__additional-info">
+        <p>Бесплатная доставка по России</p></div>
     </nav>
     <section class="header-section">
       <div class="header-section__title-wrapper">
@@ -41,7 +73,7 @@
       <div class="zig-zag--catalog"></div>
     </section>
   </div>
-
+</header>
 <main>
   <section class="form">
     <div class="form__wrapper">
@@ -49,59 +81,59 @@
         свяжемся с вами, чтобы уточнить детали.
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="search-filter search-filter--padding">
+        <fieldset class="search-filter">
           <div class="search-filter_title--wrapper">
-            <legend class="search-filter__title search-filter__title-type">Тип</legend>
+            <span class="search-filter__title search-filter__title-type">Тип</span>
             <div class="search-filter__divider"></div>
           </div>
           <ul class="search-filter__options-type">
             <li class="search-filter__item ">
-              <input type="radio" name="product-type" id="accessory" value="accessory" checked/>
+              <input type="radio" name="product-type" id="accessory" value="accessory" class="search-filter__form-radio" checked/>
               <label for="accessory" class="search-filter__option">Аксессуар для интерьера</label>
             </li>
             <li class="search-filter__item">
-              <input type="radio" name="product-type" id="kid_toy" value="kid_toy"/>
+              <input type="radio" name="product-type" id="kid_toy" value="kid_toy" class="search-filter__form-radio"/>
               <label for="kid_toy" class="search-filter__option search-filter__option--padding">Детская игрушка</label>
             </li>
           </ul>
         </fieldset>
     <div class="search-filter--background">
-      <fieldset class="search-filter search-filter--padding">
+      <fieldset class="search-filter">
         <div class="search-filter_title--wrapper">
-          <legend class="search-filter__title search-filter__title-color">Цвет</legend>
+          <span class="search-filter__title search-filter__title-color">Цвет</span>
           <div class="search-filter__divider"></div>
         </div>
         <ul class="search-filter__options-type search-filter__options-type--row">
           <li>
-            <input type="checkbox" name="white" id="white" checked/>
+            <input type="checkbox" name="white" id="white" class="search-filter__form-checkbox" checked/>
             <label for="white" class="search-filter__color search-filter__color--padding">Белый</label>
           </li>
           <li>
-            <input type="checkbox" name="gray" id="gray" checked/>
+            <input type="checkbox" name="gray" id="gray" class="search-filter__form-checkbox" checked/>
             <label for="gray" class="search-filter__color search-filter__color--padding">Серый</label>
           </li>
           <li>
-            <input type="checkbox" name="tiffany" id="tiffany"/>
+            <input type="checkbox" name="tiffany" id="tiffany" class="search-filter__form-checkbox"/>
             <label for="tiffany" class="search-filter__color search-filter__color--padding">Тиффани</label>
           </li>
           <li>
-            <input type="checkbox" name="black" id="black"/>
+            <input type="checkbox" name="black" id="black" class="search-filter__form-checkbox"/>
             <label for="black" class="search-filter__color search-filter__color--padding">Черный</label>
           </li>
           <li>
-            <input type="checkbox" name="pink" id="pink"/>
+            <input type="checkbox" name="pink" id="pink" class="search-filter__form-checkbox"/>
             <label for="pink" class="search-filter__color search-filter__color--padding">Розовый</label>
           </li>
           <li>
-            <input type="checkbox" name="orange" id="orange"/>
+            <input type="checkbox" name="orange" id="orange" class="search-filter__form-checkbox"/>
             <label for="orange" class="search-filter__color search-filter__color--last-padding">Оранжевый</label>
           </li>
         </ul>
       </fieldset>
     </div>
-      <fieldset class="search-filter search-filter--padding">
+      <fieldset class="search-filter">
         <div class="search-filter_title--wrapper">
-          <legend class="search-filter__title">ФИО</legend>
+          <span class="search-filter__title">ФИО</span>
         </div>
         <div class="search-filter__divider"></div>
         <ul class="search-filter__personal-data">
@@ -134,11 +166,11 @@
       <div class="search-filter_contact-wrapper">
         <fieldset class="search-filter search-filter__contacts--padding">
           <div class="search-filter_title--wrapper">
-            <legend class="search-filter__title search-filter__title-width">ТЕЛ</legend>
+            <span class="search-filter__title search-filter__title-width">ТЕЛ</span>
           </div>
           <div class="search-filter__divider"></div>
           <ul class="search-filter__personal-data">
-            <li class="search-filter__wrapper search-filter__wrapper--padding">
+            <li class="search-filter__wrapper--padding">
               <div class="search-filter__input-wrapper search-filter__input-padding search-filter__contacts--width">
                 <input type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" class="search-filter__placeholder"/>
               </div>
@@ -146,14 +178,14 @@
           </ul>
         </fieldset>
         <fieldset class="search-filter search-filter__contacts--padding">
-          <div class="search-filter_title--wrapper">
-            <legend class="search-filter__title search-filter__title-width">E-MAIL</legend>
+          <div class="search-filter_title--wrapper search-filter_title--margin">
+            <span class="search-filter__title search-filter__title-width">E-MAIL</span>
           </div>
-          <div class="search-filter__divider"></div>
+          <div class="search-filter__divider search-filter__divider--width"></div>
           <ul class="search-filter__personal-data">
             <li class="search-filter__wrapper search-filter__wrapper--padding">
               <div class="search-filter__input-wrapper search-filter__input-padding search-filter__contacts--width">
-                <input type="email" name="email" placeholder="Ваш Email*" class="search-filter__placeholder"/>
+                <input type="email" name="email" placeholder="Ваш Email*" class="search-filter__placeholder search-filter__placeholder--padding"/>
               </div>
             </li>
           </ul>
@@ -161,7 +193,7 @@
       </div>
       <fieldset class="search-filter additional-data search-filter--padding">
         <div class="search-filter_title--wrapper">
-          <legend class="search-filter__title">Доп</legend>
+          <span class="search-filter__title search-filter__title--additional-padding">Доп</span>
         </div>
         <div class="search-filter__divider search-filter__divider--padding"></div>
         <div class="search-filer__additional-data--padding">
@@ -197,7 +229,7 @@
     </div>
     <div class="developer">
       <h2 class="developer__title">Разработано</h2>
-      <svg width="27" height="18" class="social-wrapper__social-icon">
+      <svg width="27" height="35"  class="social-wrapper__social-icon">
         <use xlink:href="img/sprite.svg#academy-logo"></use>
       </svg>
     </div>

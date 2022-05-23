@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -20,7 +20,6 @@
 <header class="header">
   <div class="header__wrapper">
     <nav class="navigation">
-      <!--    LOGO-->
       <div class="navigation__logo-wrapper">
         <a class="link" href="index.html" aria-label="Мишка">
           <svg class="header__logo-mobile" width="86" height="35">
@@ -31,28 +30,27 @@
           <svg class="header__logo-tablet" width="114" height="46">
             <use xlink:href="img/sprite.svg#tablet-logo"></use>
           </svg>
-          <img src="img/mobile/menu-close.svg" class="navigation__menu-button" alt="Закрыть меню">
+          <img src="img/mobile/menu-close.svg" class="navigation__menu-button hidden" alt="Закрыть меню">
           <svg class="header__logo-desktop" width="149" height="72">
             <use xlink:href="img/sprite.svg#desktop-logo"></use>
           </svg>
         </a>
       </div>
-      <div class="hamburger-menu"></div>
-      <!--      FIRST MENU LIST-->
+
+<!--      add display-none class to navigation__first-menu to hide menu in mobile with js-->
       <ul class="navigation__first-menu">
-        <li class="navigation__menu-item">Каталог товаров</li>
+        <li class="navigation__menu-item"><a href="catalog.html" class="menu__link">Каталог товаров</a> </li>
         <li
           class="navigation__menu-item navigation__menu-item--padding navigation__menu-item--border navigation__menu-item--tablet-border">
-          Вязание на
-          заказ
+          <a href="form.html" class="menu__link">Вязание на заказ</a>
         </li>
       </ul>
-      <!--      SECOND BOTTOM MENU-->
       <ul class="navigation__bottom-menu">
         <li class="bottom-menu__item">Новые поступления</li>
         <li class="bottom-menu__item bottom-menu__item--padding">Распродажа</li>
       </ul>
-      <!--      RIGHT MENU-->
+
+      <!--      add display-none class to navigation__second-menu to hide menu in mobile with js-->
       <ul class="navigation__second-menu">
         <li
           class="second-menu__menu-item second-menu__menu-item--border navigation__menu-item--border second-menu__search-icon--width">
@@ -68,7 +66,7 @@
           Корзина: пока пуста
         </li>
       </ul>
-      <!--      BOTTOM RIGHT MENU-->
+
       <div class="navigation__additional-info">
         <p>Бесплатная доставка по России</p></div>
     </nav>
@@ -111,7 +109,7 @@
           <span class="week-product__subtitle-text">товар<span class="week-product__subtitle--nbsp">&nbsp;&nbsp;</span>недели</span>
         </div>
         <div class="week-product__description">
-          <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <p>Экологически чистая пряжа,<br> ручная работа. Доступны в шести расцветках и трёх размерах.</p>
           <table class="week-product__features">
             <tr class="week-product__features-options">
               <td class="week-product__features-item week-product__features-item--padding">Цвет:</td>
@@ -158,37 +156,37 @@
       </div>
       <div class="about-info__wrapper">
         <div class="about-info__flower-wrapper">
-          <svg width="33" height="38">
+          <svg width="33" height="38" class="about-info__flower">
             <use xlink:href="img/sprite.svg#flower-icon"></use>
           </svg>
           <p class="about-info__text">Экологически <br> чистые материалы</p>
         </div>
         <div class="about-info__wtf-wrapper">
-          <svg width="47" height="27">
+          <svg width="47" height="27" class="about-info__wtf">
             <use xlink:href="img/sprite.svg#wtf-icon"></use>
           </svg>
           <p class="about-info__text"> Скандинавский стиль <br> по российской цене</p>
         </div>
         <div class="about-info__heart-wrapper">
-          <svg width="34" height="27">
+          <svg width="34" height="27" class="about-info__heart">
             <use xlink:href="img/sprite.svg#heart-icon"></use>
           </svg>
-          <p class="about-info__text">Увеличивает лайкина <br>на фотографиях</p>
+          <p class="about-info__text">Увеличивает лайки<br> на фотографиях</p>
         </div>
         <div class="about-info__clew-wrapper">
-          <svg width="35" height="34">
+          <svg width="35" height="34" class="about-info__clew">
             <use xlink:href="img/sprite.svg#clew-icon"></use>
           </svg>
           <p class="about-info__text"> Связано вручную <br>с любовью и умилением </p>
         </div>
         <div class="about-info__rocket-wrapper">
-          <svg width="55" height="23">
+          <svg width="55" height="23" class="about-info__rocket">
             <use xlink:href="img/sprite.svg#rocket-icon"></use>
           </svg>
           <p class="about-info__text">Поддержка отечественного<br> производителя</p>
         </div>
         <div class="about-info__gift-wrapper">
-          <svg width="33" height="32">
+          <svg width="33" height="32" class="about-info__gift">
             <use xlink:href="img/sprite.svg#gift-icon"></use>
           </svg>
           <p class="about-info__text">Поставляется<br> в подарочной упаковке</p>
@@ -204,9 +202,9 @@
         </div>
         <div class="reviews-body">
           <p class="reviews-body__text">
-            Я молодая мама, но всё равно фотографии не набирали и близко такого
-            количества лайков, как у популярных инстамамочек. В отчаянии, я
-            накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали
+            Я молодая мама, но всё равно<br> фотографии не набирали и близко такого
+            количества лайков, как <br>у популярных инстамамочек.<br> В отчаянии, я
+            накупила<br> аксессуаров и игрушек в Мишке, <br>и мои фотографии сразу стали
             более стильными, а также набирают больше лайков!
           </p>
         </div>
@@ -253,7 +251,7 @@
           <h2 class="hidden">Наш магазин на карте</h2>
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A76c38d182d3898c1e7b16640c349473d020b4517f9b307c7f0321a27b4e2e3f4&amp;source=constructor"
-            width="100%" height="457" class="contacts_map--img"></iframe>
+            class="contacts_map--img"></iframe>
         </div>
         <div class="contacts_map__button">
           <button class="button button__contact" type="submit">напишите нам</button>
@@ -282,13 +280,11 @@
     </div>
     <div class="developer">
       <h2 class="developer__title">Разработано</h2>
-      <svg width="27" height="35" class="social-wrapper__social-icon">
+      <svg width="27" height="35"  class="social-wrapper__social-icon">
         <use xlink:href="img/sprite.svg#academy-logo"></use>
       </svg>
     </div>
   </div>
-
 </footer>
 </body>
-
 </html>
