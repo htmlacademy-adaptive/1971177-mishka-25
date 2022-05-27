@@ -362,6 +362,14 @@
 
   .modal-card__radio:checked:hover + label::before,
   .modal-card__radio:not(:checked):hover + label::before {
+    border: 2px solid #63d1bb;
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+  }
+
+  .modal-card__radio:checked:active + label::before,
+  .modal-card__radio:not(:checked):active + label::before {
     border: 2px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     width: 46px;
@@ -407,5 +415,20 @@
     font-size: 17px;
     line-height: 16px;
     text-transform: uppercase;
+  }
+
+  .modal-card__button:hover {
+    background: #444444;
+    mix-blend-mode: normal;
+    box-sizing: border-box;
+    border: 1px solid #444444;
+  }
+
+  .modal-card__button:active {
+    background: #444444;
+    mix-blend-mode: normal;
+    box-sizing: border-box;
+    border: 1px solid #444444;
+    color: rgba(255, 255, 255, 0.3);
   }
 }
